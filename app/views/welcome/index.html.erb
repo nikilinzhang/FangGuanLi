@@ -24,7 +24,7 @@
     <% @posts.each do |p| %>
       <tr>
   	    <td><%= p.id %></td>
-        <td><a href="#"><%= p.title %></a></td>
+        <td><a href=<%= posts_path(id:p.id) %>><i class="fa fa-id-card-o fa-fw"></i><%= p.title %></td>
         <td><%= p.content %></td>
       </tr>
     <% end %>
