@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</head>
 <body>
-<div class="my-3 p-3 bg-white rounded box-shadow">
-  <h3 class="border-bottom border-gray pb-2 mb-0">
-    <a class="text-dark"><%= @posts.title %></a>
-  </h3>
-  <strong class="d-block text-gray-dark">服务内容：<%= @posts.content %> </strong>
-  <strong class="d-block text-gray-dark">服务每次 <%= @posts.price %> 元 </strong>
-  <strong class="d-block text-gray-dark">联系人： <%= @posts.name %> </strong>
-  <strong class="d-block text-gray-dark">联系人电话： <%= @posts.mobile %> </strong>
-  <strong class="d-block text-gray-dark">联系人邮箱： <%= @posts.email %> </strong>
-  <button type="button" class="btn btn-info"><a href="welcome/index">返回</button>
+<head>
+  <title>房管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<div class="w3-row">
+  <div class="w3-quarter w3-container"> </div>
+  <div style="">
+  <div class="w3-half w3-container" style="padding: 70px;
+    border: 1px solid #e6ffff; background-color: #FFDAB9">
+    <h2><%= @posts.title %></h2>
+    <h4>服务内容： </h4> <p><%= @posts.content %></p>
+    <h4>服务每次 <%= @posts.price %> 元 </h4>
+    <h4>联系人：</h4> <p> <%= @posts.name %> </p>
+    <h4>联系人电话：</h4> <p> <%= @posts.mobile %> </p> 
+    <h4>联系人邮箱：</h4> <p> <%= @posts.email %> </p> 
+    <a class="button" href="welcome/index" style="border-radius: 8px; font-size: 16px; color: #808080; background: #D3D3D3">返回</a>
+  </div>
+  </div>
+  <div class="w3-quarter w3-container"></div>
 </div>
-
 </body>
 </html>

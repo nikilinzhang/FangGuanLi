@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html>
+<body>
 <head>
   <title>房管理</title>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body>
-<div class="container">
-<h1>欢迎来到房管理</h1>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>标题</th>
-      <th>主题</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @posts.each do |p| %>
+<div class="w3-quarter w3-container"> </div>
+<div class="w3-half w3-container">
+  <div class="w3-content w3-display-container container" style="max-width:1500px">
+    <div class="container">
+      <img class="mySlides" src="/images/1.jpg" style="width:100%">
+      <img class="mySlides" src="/images/2.jpg" style="width:100%">
+      <img class="mySlides" src="/images/3.jpg" style="width:100%">
+      <div class="center">欢迎来到房管理</div>
+    </div>
+    <table class="w3-table w3-striped">
       <tr>
-  	    <td><%= p.id %></td>
+        <th></th>
+        <th>标题</th>
+        <th>主题</th>
+      </tr>
+      <% @posts.each do |p| %>
+      <tr>
+        <td><%= p.id %></td>
         <td><a href=<%= posts_path(id:p.id) %>><i class="fa fa-id-card-o fa-fw"></i><%= p.title %></td>
         <td><%= p.content %></td>
       </tr>
-    <% end %>
-  </tbody>
- </table>
- </div>
+      <% end %>
+    </table>
+  </div>
+</div>
+<div class="w3-quarter w3-container"></div>
 </body>
 </html>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
