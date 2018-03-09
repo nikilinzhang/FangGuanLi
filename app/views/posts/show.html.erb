@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
+<body>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>房管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body>
 <div class="w3-row">
   <div class="w3-quarter w3-container"> </div>
-  <div class="w3-half w3-container">
-    <h3 class="border-bottom border-gray pb-2 mb-0">
-      <a class="text-dark"><%= @posts.title %></a>
-    </h3>
-  <strong class="d-block text-gray-dark">服务内容： </strong> <%= @posts.content %> 
-  <strong class="d-block text-gray-dark">服务每次 <%= @posts.price %> 元 </strong>
-  <strong class="d-block text-gray-dark">联系人：</strong> <%= @posts.name %> 
-  <strong class="d-block text-gray-dark">联系人电话：</strong> <%= @posts.mobile %> 
-  <strong class="d-block text-gray-dark">联系人邮箱：</strong> <%= @posts.email %> 
-  <br/>
-  <button > <a href="welcome/index">返回</button> 
+  <div style="">
+  <div class="w3-half w3-container" style="padding: 70px;
+    border: 1px solid #e6ffff; background-color: #FFDAB9">
+    <h2><%= @posts.title %></h2>
+    <h4>服务内容： </h4> <p><%= @posts.content %></p>
+    <h4>服务每次 <%= @posts.price %> 元 </h4>
+    <h4>联系人：</h4> <p> <%= @posts.name %> </p>
+    <h4>联系人电话：</h4> <p> <%= @posts.mobile %> </p> 
+    <h4>联系人邮箱：</h4> <p> <%= @posts.email %> </p> 
+    <a class="button" href="welcome/index" style="border-radius: 8px; font-size: 16px; color: #808080; background: #D3D3D3">返回</a>
+  </div>
   </div>
   <div class="w3-quarter w3-container"></div>
-</div>
 </div>
 </body>
 </html>
