@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+  <title>房管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<div class="w3-row">
+  <div class="w3-quarter w3-container"> </div>
+  <div class="w3-half w3-container" style="padding: 70px;
+    border: 1px solid #e6ffff; background-color: #FFDAB9">
+    <h2><%= @rent.title %></h2>
+    <h4>房屋信息： </h4> <p><%= @rent.content %></p>
+    <h4>房租： </h4> <p> <%= @rent.price %> </p>
+    <h4>联系人信息：</h4>
+    <h5>姓名：</h5> <p> <%= @rent.contact_name %> </p>
+    <h5>电话：</h5> <p> <%= @rent.mobile %> </p> 
+    <h5>微信：</h5> <p> <%= @rent.mobile %> </p> 
+    <h5>邮箱：</h5> <p> <%= @rent.email %> </p> 
+    <a class="button" href="rents_list" style="border-radius: 8px; font-size: 16px; color: #808080; background: #D3D3D3">返回</a>
+  </div>
+  <div class="w3-quarter w3-container"></div>
+</div>
+</body>
+</html>

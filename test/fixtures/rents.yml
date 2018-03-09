@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  price: 
+  contact_name: 
+  mobile: 
+  wechat: 
+  email: 
+  content: MyText
+
+two:
+  title: 
+  price: 
+  contact_name: 
+  mobile: 
+  wechat: 
+  email: 
+  content: MyText

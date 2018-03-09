@@ -5,11 +5,10 @@
     position: relative;
 }
 
-header, footer {
-    padding: 5em;
-    color: white;
-    background-color: #cce6ff;
-    clear: left;
+header {
+  
+    text-align: center;
+    
 }
 .center {
     position: absolute;
@@ -25,7 +24,8 @@ img {
   width: 200%;
 }
 body {
-  background: linear-gradient(to bottom, #e6ffff 0%, #66ccff 100%);
+  background-color: lightblue;
+  padding: 50px;
 }
 table {
     padding: 70px;
