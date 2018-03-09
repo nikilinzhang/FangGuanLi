@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-body {
-    background-color: lightblue;
-}
-
-h1 {
-    color: white;
-    text-align: center;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
-}
-</style>
-</head>
 <body>
-
-<h1>欢迎来到房管理</h1>
-
+<head>
+  <title>房管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<div class="w3-quarter w3-container"> </div>
+  <header>
+    <div class="container">
+      <img class="mySlides" src="/images/1.jpg" style="width:100%">
+      <img class="mySlides" src="/images/2.jpg" style="width:100%">
+      <img class="mySlides" src="/images/3.jpg" style="width:100%">
+      <div class="center">欢迎来到房管理</div>
+    </div>
+  </header>
+  <a href=<%= posts_list_path %>>
+    <img src="/images/fix.png" align="left" alt="HTML tutorial" style="width:25%;height:50%;border:0;border: 1px solid #e6ffff;">
+  </a>
+  <a href=<%= rents_list_path%>>
+    <img src="/images/rent.png" align="left" alt="HTML tutorial" style="width:25%;height:50%;border:0;border: 1px solid #e6ffff;">
+  </a>
+<div class="w3-quarter w3-container"></div>
 </body>
 </html>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
