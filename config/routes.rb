@@ -8,4 +8,13 @@ Rails.application.routes.draw do
 
   resource :posts do
   end
+
+  resource :posts_list do
+  end
+
+  resource :rents_list do
+  end
+
+  resource :rent do
+  end
 end
