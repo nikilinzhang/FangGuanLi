@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-body {
-    background-color: lightblue;
-}
-
-h1 {
-    color: white;
-    text-align: center;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
-}
-</style>
-</head>
 <body>
-
-<h1>欢迎来到房管理</h1>
-
+<head>
+  <title>房管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<div class="w3-quarter w3-container"> </div>
+<div class="w3-half w3-container">
+  <div class="w3-content w3-display-container container" style="max-width:1500px">
+    <div class="container">
+      <img class="mySlides" src="/images/1.jpg" style="width:100%">
+      <img class="mySlides" src="/images/2.jpg" style="width:100%">
+      <img class="mySlides" src="/images/3.jpg" style="width:100%">
+      <div class="center">欢迎来到房管理</div>
+    </div>
+    <table class="w3-table w3-striped">
+      <tr>
+        <th></th>
+        <th>标题</th>
+        <th>主题</th>
+      </tr>
+      <% @posts.each do |p| %>
+      <tr>
+        <td><%= p.id %></td>
+        <td><a href=<%= posts_path(id:p.id) %>><i class="fa fa-id-card-o fa-fw"></i><%= p.title %></td>
+        <td><%= p.content %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+<div class="w3-quarter w3-container"></div>
 </body>
 </html>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
