@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-<div class="my-3 p-3 bg-white rounded box-shadow">
-  <h3 class="border-bottom border-gray pb-2 mb-0">
-    <a class="text-dark"><%= @posts.title %></a>
-  </h3>
-  <strong class="d-block text-gray-dark">服务内容：<%= @posts.content %> </strong>
+<div class="w3-row">
+  <div class="w3-quarter w3-container"> </div>
+  <div class="w3-half w3-container">
+    <h3 class="border-bottom border-gray pb-2 mb-0">
+      <a class="text-dark"><%= @posts.title %></a>
+    </h3>
+  <strong class="d-block text-gray-dark">服务内容： </strong> <%= @posts.content %> 
   <strong class="d-block text-gray-dark">服务每次 <%= @posts.price %> 元 </strong>
-  <strong class="d-block text-gray-dark">联系人： <%= @posts.name %> </strong>
-  <strong class="d-block text-gray-dark">联系人电话： <%= @posts.mobile %> </strong>
-  <strong class="d-block text-gray-dark">联系人邮箱： <%= @posts.email %> </strong>
-  <button type="button" class="btn btn-info"><a href="welcome/index">返回</button>
+  <strong class="d-block text-gray-dark">联系人：</strong> <%= @posts.name %> 
+  <strong class="d-block text-gray-dark">联系人电话：</strong> <%= @posts.mobile %> 
+  <strong class="d-block text-gray-dark">联系人邮箱：</strong> <%= @posts.email %> 
+  <br/>
+  <button > <a href="welcome/index">返回</button> 
+  </div>
+  <div class="w3-quarter w3-container"></div>
 </div>
-
+</div>
 </body>
 </html>
