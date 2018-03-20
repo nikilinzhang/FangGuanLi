@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+  <title>房管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<div class="w3-quarter w3-container"> </div>
+<div class="w3-half w3-container">
+  <div class="w3-content w3-display-container container" style="max-width:1500px">
+	<h2>Sign Up</h2>
+	  <%= form_for(@user) do |f| %>
+	  <%= render 'shared/error_messages' %>
+      *用户名:<br>
+        <%= f.text_field :name %>
+        <!-- <input id="choose" name="i_like" required minlength="6" maxlength="6"> -->
+  		<br><br>
+      邮箱:<br>
+  		<%= f.email_field :email %>
+  		<br><br>
+   	  *电话号:<br>
+     	<%= f.text_field :mobile %>
+  		<br><br>
+   	  *密码:<br>
+    	<%= f.password_field :password %>
+  		<br><br>
+   	  *请再次输入密码:<br>
+  		<%= f.password_field :password_confirmation %>
+  		<br><br>
+  		<%= f.submit "提交", class: "btn btn-primary" %>
+	  <% end %>
+  </div>
+</div>
+<div class="w3-quarter w3-container"> </div>
+</body>
+</html>
