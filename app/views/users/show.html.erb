@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 <body>
-<% provide(:title, @user.name) %>
-<h1>
-  <%= @user.name %>, <%= @user.email %>
-</h1>
+<head>
+  <title>家管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <%= button_to "退出", logout_path(@user), method: :delete, data: { confirm: "You sure?" }%>
+  <% provide(:title, @user.name) %>
+</head>
+<div class="w3-quarter w3-container"> </div>
+<div class="w3-half w3-container">
+  <div class="w3-content w3-display-container container" style="max-width:1500px">
+    <h1>
+      <%= @user.name %>, <%= @user.email %>
+    </h1>
+  </div>
+</div>
+<div class="w3-quarter w3-container"></div>
 </body>
 </html>
