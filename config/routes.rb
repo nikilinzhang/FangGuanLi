@@ -23,7 +23,11 @@ Rails.application.routes.draw do
   end
 
   resource :users do
+    get '/signup', to: 'users#new'
+
+    get '/:id', to: 'users#show'
   end
+
 
   get '/login', to: 'sessions#new'
 
