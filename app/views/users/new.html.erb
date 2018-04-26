@@ -2,7 +2,7 @@
 <html>
 <body>
 <head>
-  <title>房管理</title>
+  <title>家管理</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
@@ -13,7 +13,7 @@
 	  <%= form_for @user do |f| %>
 	  <%= render 'shared/error_messages' %>
       *用户名:<br>
-        <%= f.text_field :name %>
+      <%= f.text_field :name %>
         <!-- <input id="choose" name="i_like" required minlength="6" maxlength="6"> -->
   		<br><br>
       邮箱:<br>
@@ -30,6 +30,8 @@
   		<br><br>
   		<%= f.submit "提交", class: "btn btn-primary" %>
 	  <% end %>
+      <br><br>
+      <p>Already have an account? <%= link_to "Signin", login_path %></p>
   </div>
 </div>
 <div class="w3-quarter w3-container"> </div>

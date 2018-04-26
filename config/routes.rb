@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'users/new'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -21,5 +23,15 @@ Rails.application.routes.draw do
   end
 
   resource :users do
+    get '/signup', to: 'users#new'
+
+    get '/:id', to: 'users#show'
   end
+
+
+  get '/login', to: 'sessions#new'
+
+  post '/login', to: 'sessions#create'
+
+  delete '/logout', to: 'sessions#destroy'
 end
