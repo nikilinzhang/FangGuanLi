@@ -14,7 +14,7 @@
       *用户名:<br>
       <%= f.text_field :name %>
       <br><br>
-      *密码:<br>
+      *密码: <%= link_to "Forgot Password?", new_password_resets_path %><br>
       <%= f.password_field :password, class: 'form-control' %>
       <br><br>
       <%= f.submit "Log in", class: "btn btn-primary" %>
