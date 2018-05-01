@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resource :posts do
+    
   end
+
 
   resource :posts_list do
   end
@@ -19,7 +21,7 @@ Rails.application.routes.draw do
   resource :rents_list do
   end
 
-  resource :rent do
+  resource :rents do
   end
 
   resource :users do
