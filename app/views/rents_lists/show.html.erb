@@ -18,7 +18,7 @@
       <% @rent.each do |r| %>
       <tr>
         <td><%= r.id %></td>
-        <td><a href=<%= rent_path(id:r.id) %> style="width: 25%"><i class="fa fa-id-card-o fa-fw"></i><%= r.title %></td>
+        <td><a href=<%= rents_path(id:r.id) %> style="width: 25%"><i class="fa fa-id-card-o fa-fw"></i><%= r.title %></td>
         <td><%= r.content %></td>
       </tr>
       <% end %>

@@ -1,5 +1,5 @@
 class PostsListsController < ApplicationController
   def show
-    @posts = Posts.all
+    @posts = Post.all
   end
 end

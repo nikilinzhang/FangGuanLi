@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+  <title>家管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<div class="w3-quarter w3-container"> </div>
+<div class="w3-half w3-container">
+  <div class="w3-content w3-display-container container" style="max-width:1500px">
+	<h2>Rent</h2>
+	  <%= form_for @rent do |f| %>
+	    *题目:<br>
+      <%= f.text_field :title %>
+      <br><br>
+      *内容:<br>
+     	<%= f.text_field :content %>
+      <br><br>
+      *价格:<br>
+      <%= f.text_field :price %>
+  		<br><br>
+   	  *联系电话:<br>
+    	<%= f.text_field :mobile %>
+      <br><br>
+      *联系邮箱:<br>
+      <%= f.email_field :email %>
+      <br><br>
+      *联系微信:<br>
+      <%= f.text_field :wechat %>
+  		<br><br>
+   	  *联系人:<br>
+  		<%= f.text_field :contact_name %>
+  		<br><br>
+  		<%= f.submit "提交", class: "btn btn-primary" %>
+	  <% end %>
+  </div>
+</div>
+<div class="w3-quarter w3-container"> </div>
+</body>
+</html>
