@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+  <title>家管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<div class="w3-row">
+  <div class="w3-quarter w3-container"> </div>
+  <div class="w3-half w3-container" style="padding: 70px;
+    border: 1px solid #e6ffff; background-color: #FFDAB9">
+    <h2><%= @product.name %></h2>
+    <h4>房屋信息： </h4> <p><%= @product.description %></p>
+    <h4>房租： </h4> <p> <%= @product.price %> </p>
+    <h4>联系人信息：</h4>
+    <a class="button" href="products_list">返回</a>
+  </div>
+  <div class="w3-quarter w3-container"></div>
+</div>
+</body>
+</html>
